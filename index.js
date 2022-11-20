@@ -1,5 +1,5 @@
 import diff from './src/diff.js';
-import getFile from './src/getFile.js';
+import getFile from './src/parser.js';
 
 export default (pathToFile1, pathToFile2) => {
   const file1 = getFile(pathToFile1);
