@@ -10,10 +10,14 @@
 
 ### Difference Calculator
 
-Compares two flat JSON files and shows difference.
+Compares two flat JSON/Yaml files and shows difference.
 
 [![asciicast](https://asciinema.org/a/D27mI3dcZSuBhCjnEznROBBJJ.svg)](https://asciinema.org/a/D27mI3dcZSuBhCjnEznROBBJJ)
 
-Compares two flat Yaml Yml files and shows difference.
+Compares two flat JSON/Yaml files and shows difference.
 
 [![asciicast](https://asciinema.org/a/IImB8jY8jsoMtqwDAbzAaBcum.svg)](https://asciinema.org/a/IImB8jY8jsoMtqwDAbzAaBcum)
+
+Compares two JSON/Yaml files deeply and shows difference.
+
+[![asciicast](https://asciinema.org/a/FLR3CRn6eYGgoyquGLrRHVZQj.svg)](https://asciinema.org/a/FLR3CRn6eYGgoyquGLrRHVZQj)
