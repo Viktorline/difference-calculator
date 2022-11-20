@@ -6,6 +6,8 @@
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/2a5f223c1af9a1db0f30/maintainability)](https://codeclimate.com/github/Viktorline/frontend-project-46/maintainability)
 
+[![Test Coverage](https://api.codeclimate.com/v1/badges/2a5f223c1af9a1db0f30/test_coverage)](https://codeclimate.com/github/Viktorline/frontend-project-46/test_coverage)
+
 ### Difference Calculator
 
 Compares two flat JSON files and shows difference.
