@@ -9,3 +9,6 @@ publish:
 
 test:
 				npx jest
+
+test-coverage:
+				npm test --coverageProvider=v8 -- --coverage 
