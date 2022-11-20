@@ -1,6 +1,6 @@
 import difference from './src/diff.js';
 import getFile from './src/parser.js';
-import format from './src/formatter.js';
+import format from './src/formatters/index.js';
 
 export default (pathToFile1, pathToFile2, formatter = 'stylish') => {
   const file1 = getFile(pathToFile1);
