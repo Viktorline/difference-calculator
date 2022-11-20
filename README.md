@@ -21,3 +21,7 @@ Compares two flat JSON/Yaml files and shows difference.
 Compares two JSON/Yaml files deeply and shows difference.
 
 [![asciicast](https://asciinema.org/a/FLR3CRn6eYGgoyquGLrRHVZQj.svg)](https://asciinema.org/a/FLR3CRn6eYGgoyquGLrRHVZQj)
+
+Compares two JSON/Yaml files deeply and shows difference in plain format.
+
+[![asciicast](https://asciinema.org/a/PD2RdDxTusCA38rCL0DvGo6zq.svg)](https://asciinema.org/a/PD2RdDxTusCA38rCL0DvGo6zq)
