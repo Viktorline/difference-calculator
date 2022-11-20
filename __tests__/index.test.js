@@ -11,6 +11,7 @@ const readFile = (filename) => readFileSync(getFixturePath(filename), 'utf-8');
 
 const expectedResultStylish = readFile('expectedResultStylish.txt');
 const expectedResultPlain = readFile('expectedResultPlain.txt');
+const expectedResultJson = readFile('expectedResultJson.txt');
 
 test('genDiff deep json/yaml', () => {
   const funcResult = genDiff(getFixturePath('file1.json'), getFixturePath('file2.json'), 'stylish');
@@ -25,4 +26,9 @@ test('genDiff deep json/yaml stylish', () => {
 test('genDiff deep json/yaml plain', () => {
   const funcResult = genDiff(getFixturePath('file1.json'), getFixturePath('file2.json'), 'plain');
   expect(funcResult).toEqual(expectedResultPlain);
+});
+
+test('genDiff deep json/yaml json', () => {
+  const funcResult = genDiff(getFixturePath('file1.json'), getFixturePath('file2.json'), 'json');
+  expect(funcResult).toEqual(expectedResultJson);
 });
