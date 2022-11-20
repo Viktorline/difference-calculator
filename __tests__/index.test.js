@@ -1,17 +1,20 @@
 import { fileURLToPath } from 'url';
 import path, { dirname } from 'path';
-import * as fs from 'fs';
-// import diff from '../src/diff.js';
-// import getFile from '../src/getFile.js';
+import genDiff from '../index.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 const getFixturePath = (filename) => path.join(__dirname, '..', '__fixtures__', filename);
-const readFile = (filename) => fs.readFileSync(getFixturePath(filename), 'utf-8');
-
-console.log(readFile('./__fixtures__/file1.json'));
-
-test('adds 1 + 2 to equal 3', () => {
-  expect(1 + 2).toBe(3);
+test('genDiff flat json', () => {
+  const funcResult = genDiff(getFixturePath('file1.json'), getFixturePath('file2.json'));
+  const expectResult = `{
+  - follow: false
+    host: hexlet.io
+  - proxy: 123.234.53.22
+  - timeout: 50
+  + timeout: 20
+  + verbose: true
+}`;
+  expect(funcResult).toEqual(expectResult);
 });

@@ -9,7 +9,7 @@ export default (file1, file2) => {
       } else if (!Object.hasOwn(file2, key)) {
         acc.push(`  - ${key}: ${file1[key]}\n`);
       } else if (file1[key] !== file2[key]) {
-        acc.push(`  - ${key}: ${file1[key]} \n  + ${key}: ${file2[key]}\n`);
+        acc.push(`  - ${key}: ${file1[key]}\n  + ${key}: ${file2[key]}\n`);
       } else {
         acc.push(`    ${key}: ${file1[key]}\n`);
       }
