@@ -4,6 +4,8 @@
 
 [![Github Actions](https://github.com/Viktorline/frontend-project-46/actions/workflows/tests.yml/badge.svg)](https://github.com/Viktorline/frontend-project-46/actions/workflows/tests.yml/badge.svg)
 
+[![Maintainability](https://api.codeclimate.com/v1/badges/2a5f223c1af9a1db0f30/maintainability)](https://codeclimate.com/github/Viktorline/frontend-project-46/maintainability)
+
 ### Difference Calculator
 
 Compares two flat JSON files and shows difference.
