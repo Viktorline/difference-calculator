@@ -2,24 +2,26 @@ import _ from 'lodash';
 
 const indent = (depth, spaceCount = 4) => ' '.repeat(spaceCount * depth - 2);
 
-const findValue = (value, depth) => {
+const prepareValue = (value, depth) => {
   if (!_.isObject(value)) {
     return `${value}`;
   }
 
   const entries = Object.entries(value);
-  const lines = entries.map(([key, val]) => `${indent(depth + 1)}  ${key}: ${findValue(val, depth + 1)}`);
+  const lines = entries.map(([key, val]) => `${indent(depth + 1)}  ${key}: ${prepareValue(val, depth + 1)}`);
 
   return ['{', ...lines, `${indent(depth)}  }`].join('\n');
 };
 
 const stylish = (diff) => {
-  const iter = (tree, depth) => tree.map(({ type, key, value }) => {
-    const getValue = (val, char) => `${indent(depth)}${char} ${key}: ${findValue(val, depth)}\n`;
+  const iter = (tree, depth) => tree.map(({
+    type, key, value, children,
+  }) => {
+    const getValue = (val, char) => `${indent(depth)}${char} ${key}: ${prepareValue(val, depth)}\n`;
 
     switch (type) {
-      case 'json':
-        return `${indent(depth)}  ${key}: {\n${iter(value, depth + 1).join('')}${indent(depth)}  }\n`;
+      case 'nested':
+        return `${indent(depth)}  ${key}: {\n${iter(children, depth + 1).join('')}${indent(depth)}  }\n`;
       case 'added':
         return getValue(value, '+');
       case 'deleted':

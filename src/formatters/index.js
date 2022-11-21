@@ -12,5 +12,5 @@ export default (tree, formatter) => {
   if (formatter === 'json') {
     return json(tree);
   }
-  return 'Wrong formatter';
+  throw new Error(`Unknown format ${formatter}`);
 };
