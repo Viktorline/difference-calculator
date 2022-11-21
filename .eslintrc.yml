@@ -1,7 +1,4 @@
-# https://github.com/jest-community/eslint-plugin-jest
-plugins:
-  - jest
-  - fp
+
 env:
   es2021: true
   node: true
