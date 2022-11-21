@@ -6,9 +6,8 @@ env:
 
 extends:
   - airbnb-base
-  - "plugin:jest/recommended"
-  - "plugin:fp/recommended"
 
+  
 overrides: []
 parserOptions:
   ecmaVersion: 2020
@@ -20,7 +19,3 @@ rules:
   fp/no-nil: 0
   fp/no-unused-expression: 0
   fp/no-throw: 0
-  fp/no-mutating-methods:
-    - error
-    - allowedObjects:
-      - "_"
