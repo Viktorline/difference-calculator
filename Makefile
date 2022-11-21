@@ -9,3 +9,6 @@ publish:
 
 test:
 				npm test
+
+test-coverage: 
+				npm test -s -- --coverage genDiff.test.js
