@@ -1,6 +1,6 @@
 import _ from 'lodash';
 
-const prepareValue = (value) => {
+const stringify = (value) => {
   if (_.isObject(value)) {
     return '[complex value]';
   }
@@ -18,15 +18,15 @@ const plain = (diff, path = []) => {
     const node = newPath.join('.');
 
     if (item.type === 'added') {
-      const value = prepareValue(item.value);
+      const value = stringify(item.value);
       return `Property '${node}' was added with value: ${value}`;
     }
     if (item.type === 'deleted') {
       return `Property '${node}' was removed`;
     }
     if (item.type === 'changed') {
-      const firstValue = prepareValue(item.value.firstValue);
-      const secondValue = prepareValue(item.value.secondValue);
+      const firstValue = stringify(item.value.firstValue);
+      const secondValue = stringify(item.value.secondValue);
       return `Property '${node}' was updated. From ${firstValue} to ${secondValue}`;
     }
 

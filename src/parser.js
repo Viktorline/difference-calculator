@@ -1,15 +1,11 @@
-import * as fs from 'fs';
-import path from 'path';
 import yaml from 'js-yaml';
 
-export default (pathToFile, fileExtension) => {
-  const unreadFile = fs.readFileSync(path.resolve(process.cwd(), pathToFile));
-
+export default (file, fileExtension) => {
   if (fileExtension === 'json') {
-    return JSON.parse(unreadFile);
+    return JSON.parse(file);
   }
   if (fileExtension === 'yaml' || fileExtension === 'yml') {
-    return yaml.load(unreadFile);
+    return yaml.load(file);
   }
 
   throw new Error(`Wrong files extension - '${fileExtension}'! Only .json .yml/.yaml supported`);
