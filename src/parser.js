@@ -1,12 +1,12 @@
 import yaml from 'js-yaml';
 
-export default (file, fileExtension) => {
-  if (fileExtension === 'json') {
-    return JSON.parse(file);
+export default (data, format) => {
+  if (format === 'json') {
+    return JSON.parse(data);
   }
-  if (fileExtension === 'yaml' || fileExtension === 'yml') {
-    return yaml.load(file);
+  if (format === 'yaml' || format === 'yml') {
+    return yaml.load(data);
   }
 
-  throw new Error(`Wrong files extension - '${fileExtension}'! Only .json .yml/.yaml supported`);
+  throw new Error(`Wrong files extension - '${format}'! Only .json .yml/.yaml supported`);
 };
