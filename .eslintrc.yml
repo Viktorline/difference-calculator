@@ -1,4 +1,3 @@
-
 env:
   es2021: true
   node: true
@@ -7,7 +6,6 @@ env:
 extends:
   - airbnb-base
 
-  
 overrides: []
 parserOptions:
   ecmaVersion: 2020
@@ -15,7 +13,7 @@ parserOptions:
 rules:
   no-console: 0
   import/extensions: 0 # TODO: remove when rule will be adjusted for new nodejs version (issue link?)
-  no-underscore-dangle: [2, { "allow": ["__filename", "__dirname"] }]
+  no-underscore-dangle: [2, { 'allow': ['__filename', '__dirname'] }]
   fp/no-nil: 0
   fp/no-unused-expression: 0
   fp/no-throw: 0
